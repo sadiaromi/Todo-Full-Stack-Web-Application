@@ -65,8 +65,7 @@ Thumbs.db
 ehthumbs.db
 Thumbs.db
 
-# Ignore backend folder
-/backend/
+
 
 
 # Next.js build output
