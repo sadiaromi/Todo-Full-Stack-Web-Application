@@ -3,20 +3,20 @@
 // API endpoints
 export const API_ENDPOINTS = {
   AUTH: {
-    SIGNUP: '/api/auth/signup',
-    LOGIN: '/api/auth/login',
-    LOGOUT: '/api/auth/logout',
-    REFRESH: '/api/auth/refresh',
+    SIGNUP: `${process.env.NEXT_PUBLIC_API_URL}/api/auth/signup`,
+    LOGIN: `${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`,
+    LOGOUT: `${process.env.NEXT_PUBLIC_API_URL}/api/auth/logout`,
+    REFRESH: `${process.env.NEXT_PUBLIC_API_URL}/api/auth/refresh`,
   },
   TASKS: {
-    BASE: '/api/tasks',
-    GET_ALL: '/api/tasks',
-    CREATE: '/api/tasks',
-    UPDATE: (id) => `/api/tasks/${id}`,
-    DELETE: (id) => `/api/tasks/${id}`,
-    GET_BY_ID: (id) => `/api/tasks/${id}`,
+    BASE: `${process.env.NEXT_PUBLIC_API_URL}/api/tasks`,
+    GET_ALL: `${process.env.NEXT_PUBLIC_API_URL}/api/tasks`,
+    CREATE: `${process.env.NEXT_PUBLIC_API_URL}/api/tasks`,
+    UPDATE: (id) => `${process.env.NEXT_PUBLIC_API_URL}/api/tasks/${id}`,
+    DELETE: (id) => `${process.env.NEXT_PUBLIC_API_URL}/api/tasks/${id}`,
+    GET_BY_ID: (id) => `${process.env.NEXT_PUBLIC_API_URL}/api/tasks/${id}`,
   },
-  HEALTH: '/api/health',
+  HEALTH: `${process.env.NEXT_PUBLIC_API_URL}/api/health`,
 };
 
 // Error messages
