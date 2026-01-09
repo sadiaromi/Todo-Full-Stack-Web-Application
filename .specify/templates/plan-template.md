@@ -31,7 +31,39 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### Spec-Driven Development Compliance
+- [ ] All implementation work based on approved specifications
+- [ ] No code implementation without corresponding spec
+- [ ] User stories and acceptance criteria defined before development
+
+### Security-First Architecture Compliance
+- [ ] Authentication and authorization implemented correctly at all layers
+- [ ] User input validated properly
+- [ ] API endpoints enforce proper authentication and authorization
+- [ ] Sensitive data handled according to security best practices
+
+### Frontend-Backend Separation Compliance
+- [ ] Clear separation of concerns between frontend and backend responsibilities
+- [ ] Frontend handles UI/UX and client-side logic
+- [ ] Backend provides API services and business logic
+- [ ] Communication through well-defined API contracts
+- [ ] No direct database access from frontend
+
+### Authentication and Authorization Integrity Compliance
+- [ ] Better Auth runs ONLY in frontend
+- [ ] Backend does NOT trust user_id from URL without JWT validation
+- [ ] JWT verified using shared secret (BETTER_AUTH_SECRET)
+- [ ] Every API request includes Authorization: Bearer <token>
+- [ ] Backend extracts user identity ONLY from JWT
+- [ ] Backend enforces task ownership on every operation
+
+### API Security Rules Compliance
+- [ ] All routes under /api/ namespace
+- [ ] RESTful conventions followed with proper HTTP methods
+- [ ] JSON only for request/response payloads
+- [ ] Stateless authentication required
+- [ ] Return 401 for missing/invalid tokens
+- [ ] Return 403 for unauthorized access attempts
 
 ## Project Structure
 

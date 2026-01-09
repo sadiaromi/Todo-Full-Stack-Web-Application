@@ -100,6 +100,28 @@
 - **[Entity 1]**: [What it represents, key attributes without implementation]
 - **[Entity 2]**: [What it represents, relationships to other entities]
 
+## Security & Authentication Requirements *(mandatory)*
+
+### Authentication & Authorization
+- **SEC-001**: System MUST use Better Auth for frontend authentication
+- **SEC-002**: Backend MUST validate JWT tokens using shared secret (BETTER_AUTH_SECRET)
+- **SEC-003**: All API requests MUST include Authorization: Bearer <token> header
+- **SEC-004**: Backend MUST extract user identity ONLY from JWT, NOT from URL parameters
+- **SEC-005**: Backend MUST enforce task ownership on every operation
+
+### API Security
+- **SEC-006**: All routes MUST be under /api/ namespace
+- **SEC-007**: System MUST follow RESTful conventions with proper HTTP methods
+- **SEC-008**: All request/response payloads MUST be in JSON format only
+- **SEC-009**: System MUST implement stateless authentication
+- **SEC-010**: System MUST return 401 for missing/invalid tokens
+- **SEC-011**: System MUST return 403 for unauthorized access attempts
+
+### Data Security
+- **SEC-012**: All database queries MUST be filtered by authenticated user
+- **SEC-013**: Tasks table MUST reference users.id for proper ownership
+- **SEC-014**: System MUST enforce row-level security based on user authentication
+
 ## Success Criteria *(mandatory)*
 
 <!--
