@@ -41,31 +41,7 @@ A full-stack todo application built with Next.js, FastAPI, and PostgreSQL, featu
    npm install
    ```
 
-### Environment Variables
 
-Create a `.env` file in the backend directory with the following variables:
-
-```env
-# Database Configuration
-DATABASE_URL="postgresql://username:password@localhost:5432/todo_app"
-
-# JWT Configuration
-JWT_SECRET="your-super-secret-jwt-key-here-make-it-long-and-random"
-JWT_ALGORITHM="HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-REFRESH_TOKEN_EXPIRE_DAYS=7
-
-# Better Auth Configuration
-BETTER_AUTH_SECRET="your-better-auth-secret"
-BETTER_AUTH_URL="http://localhost:3000"
-
-# Application Configuration
-API_PREFIX="/api"
-DEBUG_MODE=true
-
-# Frontend Configuration
-NEXT_PUBLIC_API_URL="http://localhost:8000"
-NEXT_PUBLIC_BASE_URL="http://localhost:3000"
 ```
 
 ### Running the Application
